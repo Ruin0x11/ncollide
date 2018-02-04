@@ -34,7 +34,7 @@ ncollide_transformation = { path = "./ncollide_transformation", version = "0.8" 
 [dev-dependencies]
 approx   = "0.1"
 alga     = "0.5"
-nalgebra = "0.14"
+nalgebra = {version = "0.14", features = ["serde-serialize"] }
 rand     = "0.4"
 
 [workspace]
