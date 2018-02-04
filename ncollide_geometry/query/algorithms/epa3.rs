@@ -347,6 +347,10 @@ impl<P: Point> EPA3<P> {
                     }
                 }
             }
+            if self.faces.len() <= first_new_face_id || self.faces[first_new_face_id].adj.len() < 3 {
+                return face.proj;
+            }
+
             self.faces[first_new_face_id].adj[2] = self.faces.len() - 1;
             self.faces.last_mut().unwrap().adj[1] = first_new_face_id;
 
